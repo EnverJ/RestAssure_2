@@ -1,0 +1,16 @@
+part_1:
+official website:https://rest-assured.io/
+prerequest:
+Java application
+Eclipse
+testNG
+Maven
+----/src/main usually used by Developer. Test can use test package
+-RestAssured
+-TestNG
+-Json-simple---Verify response in Json format
+-apache poi--need two dependencies: poi and poi-ooxml
+part_1: https://www.pavantestingtools.com/2019/05/apiwebservices-testing-using-restassured.html   download
+
+
+
