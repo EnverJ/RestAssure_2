@@ -12,5 +12,12 @@ Maven
 -apache poi--need two dependencies: poi and poi-ooxml
 part_1: https://www.pavantestingtools.com/2019/05/apiwebservices-testing-using-restassured.html   download
 
+Response
+-----------
+status code
+status line
+ResponseTime
+Headers
+Response Body
 
 
