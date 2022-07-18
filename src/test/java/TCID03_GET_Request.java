@@ -16,7 +16,7 @@ public class TCID03_GET_Request {
         // 3.Response Object. in this reponse I AM GOING TO VALIDATE THE HEADER
         Response response = httpRequest.request(Method.GET, "/maps/api/place/nearbysearch/xml?location=-33.8670522,151.1957362&radius=1500&type=supermarket&key=AIzaSyBjGCE3VpLU4lgTqSTDmHmJ2HoELb4Jy1s\n");
 
-        // print response in console window. Response body normally coming in Json format. So we need to use asString in order to print it. this step can be ignored in work
+        // print response in console window. Response body normally coming  in Json format. So we need to use asString in order to print it. this step can be ignored in work
         String responseBody = response.getBody().asString();
         System.out.println("Response Body: " + responseBody);
 
