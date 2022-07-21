@@ -1,0 +1,8 @@
+1. prepare test data in Excel(Apache POI)
+2. (Download or) add apache poi and attach Jars to your project built path
+3. xl utility file(java class file) which will read data from excel(reusebility and avoid duplicate )
+https://github.com/writetoprabha/APIAutomation/blob/master/src/test/java/utils/XLUtility.java
+4. write TestNG test with DataProvider method
+// create local api
+npm install -g json-server
+json-server --watch db.json
