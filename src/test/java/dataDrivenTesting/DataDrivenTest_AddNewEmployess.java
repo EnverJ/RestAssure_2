@@ -9,6 +9,8 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 public class DataDrivenTest_AddNewEmployess {
    @Test(dataProvider = "empDataProvide")
     void addNewEmployees(String firstName,String lastName,String subjectId){
@@ -42,9 +44,23 @@ public class DataDrivenTest_AddNewEmployess {
     }
     //2 postReqt---multiple set of data
     @DataProvider(name="empDataProvide")
-    Object[][] getEmpData(){
-       String empData[][]={{"abs","Enver","3"},{"sadf","Enver","6"},{"Eddd","Enver","4"}};
-       return (empData);
+    Object[][] getEmpData() throws IOException {
+       // hard code
+      // String empData[][]={{"abs","Enver","3"},{"sadf","Enver","6"},{"Eddd","Enver","4"}};
+        //XL
+        String path=System.getProperty(("dataDrivenTesting/Users.xlsx"));
+        int rowNum=XLUtilis.getRowCount(path,"Sheet1");
+        int colCount=XLUtilis.getCellCount(path,"Sheet1",1);
+        String users[][]=new String[rowNum][colCount];
+        for(int i=1;i<rowNum;i++){
+            for(int j=1;j<colCount;j++){
+                users[i-1][j]=XLUtilis.getCellData(path,"Sheet1",i,j);
+
+            }
+        }
+        // String empData[][]={{"abs","Enver","3"},{"sadf","Enver","6"},{"Eddd","Enver","4"}};
+      //  return (empData);
+       return (users);
 
     }
 }

@@ -5,4 +5,6 @@ https://github.com/writetoprabha/APIAutomation/blob/master/src/test/java/utils/X
 4. write TestNG test with DataProvider method
 // create local api
 npm install -g json-server
-json-server --watch db.json 
+json-server --watch db.json
+
+// Read data from excel uility file
