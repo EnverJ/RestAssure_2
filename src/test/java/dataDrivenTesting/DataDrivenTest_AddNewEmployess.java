@@ -48,12 +48,12 @@ public class DataDrivenTest_AddNewEmployess {
        // hard code
       // String empData[][]={{"abs","Enver","3"},{"sadf","Enver","6"},{"Eddd","Enver","4"}};
         //XL
-        String path=System.getProperty(("dataDrivenTesting/Users.xlsx"));
+        String path=System.getProperty(("user.dir"+"/drc/test/java/dataDrivenTesting/Users.xlsx"));
         int rowNum=XLUtilis.getRowCount(path,"Sheet1");
         int colCount=XLUtilis.getCellCount(path,"Sheet1",1);
         String users[][]=new String[rowNum][colCount];
-        for(int i=1;i<rowNum;i++){
-            for(int j=1;j<colCount;j++){
+        for(int i=1;i<=rowNum;i++){
+            for(int j=0;j<colCount;j++){
                 users[i-1][j]=XLUtilis.getCellData(path,"Sheet1",i,j);
 
             }
