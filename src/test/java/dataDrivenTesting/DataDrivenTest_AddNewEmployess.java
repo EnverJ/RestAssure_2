@@ -42,7 +42,7 @@ public class DataDrivenTest_AddNewEmployess {
         Assert.assertEquals(statusCode,201);  */
 
     }
-    //2 postReqt---multiple set of data 
+    //2 postReqt---multiple set of data
     @DataProvider(name="empDataProvide")
     Object[][] getEmpData() throws IOException {
        // hard code
@@ -58,7 +58,7 @@ public class DataDrivenTest_AddNewEmployess {
 
             }
         }
-        // String empData[][]={{"abs","Enver","3"},{"sadf","Enver","6"},{"Eddd","Enver","4"}};
+        // String empData[][]={{"abs","Enver","3"},{"sadf","Enver","6"},{"Edd","Enver","4"}};
       //  return (empData);
        return (users);
 
