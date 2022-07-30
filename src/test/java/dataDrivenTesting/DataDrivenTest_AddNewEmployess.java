@@ -54,7 +54,7 @@ public class DataDrivenTest_AddNewEmployess {
         String users[][]=new String[rowNum][colCount];
         for(int i=1;i<=rowNum;i++){
             for(int j=0;j<colCount;j++){
-                users[i-1][j]=XLUtilis.getCellData(path,"Sheet1",i,j);
+                users[i-1][j]=XLUtilis.getCellData(path,"Sheet1",i,j); 
 
             }
         }
